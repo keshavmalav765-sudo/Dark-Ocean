@@ -1,0 +1,35 @@
+.info-hero {
+    padding-top: 150px;
+    max-width: 860px;
+}
+
+.info-grid,
+.contact-layout {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.info-card {
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}

@@ -1,0 +1,72 @@
+.login-shell {
+    min-height: 100vh;
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.login-copy {
+    max-width: 620px;
+}
+
+.login-copy h1 {
+    margin-bottom: 18px;
+}
+
+.login-hint,
+.login-card {
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: var(--shadow);
+}
+
+.login-hint {
+    margin-top: 28px;
+    padding: 24px;
+}
+
+.login-card {
+    padding: 30px;
+    display: grid;
+    gap: 14px;
+}
+
+.login-card label {
+    color: var(--text);
+    font-size: 0.92rem;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+}
+
+.login-card input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(209, 175, 111, 0.12);
+}
+
+.login-status {
+    min-height: 24px;
+    color: var(--accent-strong);
+}
+
+.login-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.secret-note {
+    margin-top: 16px;
+    min-height: 22px;
+    color: var(--accent-strong);
+}

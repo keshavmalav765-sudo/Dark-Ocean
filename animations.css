@@ -1,0 +1,81 @@
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Hover Luxury Effect */
+.lux-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.lux-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.6s;
+}
+
+.lux-btn:hover::before {
+    left: 100%;
+}
+
+/* ===== LUXURY PAGE LOADER ===== */
+
+.lux-loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0A0F1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.loader-content h1 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 6px;
+    color: #C6A962;
+    font-size: 40px;
+    animation: fadeLogo 2s ease forwards;
+}
+
+@keyframes fadeLogo {
+    0% {
+        opacity: 0;
+        letter-spacing: 20px;
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: 6px;
+    }
+}
+
+.lux-loader.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ===== PAGE TRANSITION ===== */
+
+body {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+}

@@ -1,0 +1,239 @@
+.product-section {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    padding-top: 150px;
+}
+
+.product-gallery,
+.product-info {
+    min-width: 0;
+}
+
+.image-wrapper {
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.main-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.image-wrapper:hover .main-image {
+    transform: scale(1.03);
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.thumbnail.active,
+.thumbnail:hover {
+    opacity: 1;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.product-info {
+    display: grid;
+    align-content: start;
+    gap: 16px;
+}
+
+.product-info h1 {
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+}
+
+.rating-row {
+    display: flex;
+    gap: 10px;
+    color: var(--muted);
+}
+
+#productRating {
+    color: var(--accent-strong);
+}
+
+.trust-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.trust-strip span {
+    padding: 8px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.product-info .price {
+    font-size: 1.3rem;
+}
+
+.sizes {
+    display: grid;
+    gap: 14px;
+}
+
+.size-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.size-btn {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.size-btn.active,
+.size-btn:hover {
+    background: var(--accent);
+    color: #111;
+    border-color: var(--accent);
+}
+
+.qty-picker {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 14px;
+    width: fit-content;
+}
+
+.qty-picker button {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.qty-picker span {
+    min-width: 22px;
+    text-align: center;
+    color: var(--accent-strong);
+}
+
+.product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.details-grid {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.detail-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.reviews-section {
+    padding-top: 26px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.review-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    display: grid;
+    gap: 8px;
+}
+
+.review-stars {
+    color: var(--accent-strong);
+}
+
+.review-card span {
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+.related-section {
+    padding-top: 10px;
+}
+
+.related-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.related-card h3 {
+    margin-bottom: 6px;
+}
+
+.sticky-buy {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 74px;
+    z-index: 1000;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: rgba(9, 19, 33, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 10px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.sticky-buy p {
+    font-size: 0.82rem;
+}
+
+.sticky-buy.active {
+    display: flex;
+}
+
+@media (min-width: 641px) {
+    .sticky-buy {
+        display: none !important;
+    }
+}

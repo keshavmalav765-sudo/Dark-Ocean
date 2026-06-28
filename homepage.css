@@ -1,0 +1,187 @@
+.hero {
+    min-height: 95vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(24px);
+}
+
+.hero::before {
+    width: 340px;
+    height: 340px;
+    background: rgba(209, 175, 111, 0.14);
+    top: 18%;
+    left: 8%;
+}
+
+.hero::after {
+    width: 420px;
+    height: 420px;
+    background: rgba(44, 83, 130, 0.24);
+    bottom: 10%;
+    right: 6%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+}
+
+.hero h1 {
+    font-size: clamp(3.4rem, 7vw, 5.8rem);
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.campaign-strip {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.featured {
+    padding-top: 40px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.product-card {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 18px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(209, 175, 111, 0.4);
+    box-shadow: var(--shadow);
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 18px;
+}
+
+.product-card h3 {
+    margin-bottom: 8px;
+}
+
+.occasion-grid,
+.lookbook,
+.testimonials {
+    padding-top: 20px;
+}
+
+.occasion-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.occasion-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    text-decoration: none;
+}
+
+.occasion-card h3 {
+    margin-bottom: 8px;
+}
+
+.lookbook-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.lookbook-strip img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.testimonial-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 18px;
+    display: grid;
+    gap: 10px;
+}
+
+.philosophy {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.philosophy-copy {
+    max-width: 650px;
+}
+
+.philosophy-stats {
+    display: grid;
+    gap: 18px;
+}
+
+.philosophy-stats div {
+    padding: 22px 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+}
+
+.philosophy-stats strong {
+    display: block;
+    color: var(--accent-strong);
+    font-size: 2rem;
+    margin-bottom: 8px;
+}

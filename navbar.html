@@ -1,0 +1,40 @@
+<nav class="navbar-shell">
+    <div class="nav-container">
+        <a class="logo" href="index.html" aria-label="Dark Ocean home">
+            <img src="assets/images/logo/logo-white.png" alt="Dark Ocean logo">
+        </a>
+
+        <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <button class="cart" id="cartIcon" type="button" aria-label="Open mini cart">
+            <span class="cart-icon">Cart</span>
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </div>
+</nav>
+
+<aside class="mini-cart" id="miniCart">
+    <div class="mini-cart-panel">
+        <div class="mini-cart-header">
+            <h3>Your Selection</h3>
+            <button id="closeMiniCart" type="button" aria-label="Close mini cart">&times;</button>
+        </div>
+
+        <div class="mini-cart-items" id="miniCartItems"></div>
+
+        <div class="mini-cart-footer">
+            <p>Total: <span id="miniCartTotal">Rs. 0</span></p>
+            <a href="cart.html" class="lux-btn">View Cart</a>
+        </div>
+    </div>
+</aside>

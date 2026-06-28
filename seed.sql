@@ -1,0 +1,185 @@
+INSERT INTO products (
+    name, category, price, badge, description, image, gallery_json, rating, reviews_count, fabric, care, fit, model_info, sku, colors_json, materials_json, stock_by_size_json
+) VALUES
+(
+    'Midnight Sovereign Jacket',
+    'jacket',
+    9800,
+    'Bestseller',
+    'Sharp-shouldered silhouette crafted for silent dominance and controlled presence.',
+    'assets/images/products/jackets/midnight-sovereign-jacket-dark-ocean.jpg',
+    JSON_ARRAY(
+        'assets/images/products/jackets/midnight-sovereign-jacket-dark-ocean.jpg',
+        'assets/images/products/jackets/phantom-edge-blazer-dark-ocean.jpg'
+    ),
+    4.80,
+    124,
+    'Italian wool blend',
+    'Dry clean only',
+    'Structured fit',
+    'Model is 6''1 and wears M',
+    'DO-JKT-001',
+    JSON_ARRAY('Black', 'Graphite'),
+    JSON_ARRAY('Wool', 'Viscose'),
+    JSON_OBJECT('S', 8, 'M', 14, 'L', 12, 'XL', 6)
+),
+(
+    'Obsidian Crest Suit',
+    'suit',
+    19500,
+    'Editor''s Pick',
+    'A statement of authority. Designed for those who move without noise but command the room.',
+    'assets/images/products/suits/obsidian-crest-suit-dark-ocean.jpg',
+    JSON_ARRAY(
+        'assets/images/products/suits/obsidian-crest-suit-dark-ocean.jpg',
+        'assets/images/products/suits/eclipse-formal-set-dark-ocean.jpg'
+    ),
+    4.90,
+    66,
+    'Super 120s wool',
+    'Dry clean only',
+    'Modern classic fit',
+    'Model is 6''0 and wears L',
+    'DO-SUT-003',
+    JSON_ARRAY('Onyx', 'Charcoal'),
+    JSON_ARRAY('Wool'),
+    JSON_OBJECT('S', 5, 'M', 9, 'L', 10, 'XL', 4)
+),
+(
+    'Abyss Noir Shirt',
+    'shirt',
+    4900,
+    'New',
+    'Engineered with precision tailoring for a sharp, uninterrupted silhouette.',
+    'assets/images/products/shirts/abyss-noir-shirt-dark-ocean.jpg',
+    JSON_ARRAY(
+        'assets/images/products/shirts/abyss-noir-shirt-dark-ocean.jpg',
+        'assets/images/products/knitwear/ocean-veil-turtleneck-dark-ocean.jpg',
+        'assets/images/products/trousers/black-tide-trousers-dark-ocean.jpg'
+    ),
+    4.60,
+    87,
+    'Premium cotton satin',
+    'Cold wash, low tumble',
+    'Slim tailored fit',
+    'Model is 5''11 and wears M',
+    'DO-SHT-002',
+    JSON_ARRAY('Black', 'Ink Blue'),
+    JSON_ARRAY('Cotton Satin'),
+    JSON_OBJECT('S', 12, 'M', 18, 'L', 11, 'XL', 7)
+),
+(
+    'Deep Current Overcoat',
+    'coat',
+    14200,
+    'Seasonal',
+    'Minimal exterior. Powerful presence. Built for colder atmospheres.',
+    'assets/images/products/coats/deep-current-overcoat-dark-ocean.jpg',
+    JSON_ARRAY(
+        'assets/images/products/coats/deep-current-overcoat-dark-ocean.jpg',
+        'assets/images/products/jackets/midnight-sovereign-jacket-dark-ocean.jpg',
+        'assets/images/products/trousers/black-tide-trousers-dark-ocean.jpg'
+    ),
+    4.70,
+    48,
+    'Wool cashmere blend',
+    'Dry clean only',
+    'Relaxed overcoat fit',
+    'Model is 6''2 and wears L',
+    'DO-COT-004',
+    JSON_ARRAY('Deep Navy', 'Black'),
+    JSON_ARRAY('Wool', 'Cashmere'),
+    JSON_OBJECT('S', 4, 'M', 8, 'L', 9, 'XL', 5)
+),
+(
+    'Phantom Edge Blazer',
+    'jacket',
+    11300,
+    'Bestseller',
+    'Sharp cut. Refined finish. Built for elevated evenings.',
+    'assets/images/products/jackets/phantom-edge-blazer-dark-ocean.jpg',
+    JSON_ARRAY(
+        'assets/images/products/jackets/phantom-edge-blazer-dark-ocean.jpg',
+        'assets/images/products/suits/obsidian-crest-suit-dark-ocean.jpg',
+        'assets/images/products/shirts/abyss-noir-shirt-dark-ocean.jpg'
+    ),
+    4.80,
+    91,
+    'Wool viscose blend',
+    'Dry clean only',
+    'Tapered fit',
+    'Model is 6''0 and wears M',
+    'DO-JKT-005',
+    JSON_ARRAY('Black'),
+    JSON_ARRAY('Wool', 'Viscose'),
+    JSON_OBJECT('S', 7, 'M', 13, 'L', 10, 'XL', 5)
+),
+(
+    'Ocean Veil Turtleneck',
+    'knitwear',
+    5600,
+    'Essential',
+    'Soft texture, firm structure. Designed for understated authority.',
+    'assets/images/products/knitwear/ocean-veil-turtleneck-dark-ocean.jpg',
+    JSON_ARRAY(
+        'assets/images/products/knitwear/ocean-veil-turtleneck-dark-ocean.jpg',
+        'assets/images/products/coats/deep-current-overcoat-dark-ocean.jpg',
+        'assets/images/products/trousers/black-tide-trousers-dark-ocean.jpg'
+    ),
+    4.50,
+    59,
+    'Merino knit',
+    'Hand wash cold',
+    'Regular fit',
+    'Model is 5''10 and wears M',
+    'DO-KNT-006',
+    JSON_ARRAY('Black', 'Ash'),
+    JSON_ARRAY('Merino Wool'),
+    JSON_OBJECT('S', 9, 'M', 15, 'L', 12, 'XL', 8)
+),
+(
+    'Black Tide Trousers',
+    'trousers',
+    6200,
+    'Classic',
+    'Balanced taper. Controlled fall. Luxury in motion.',
+    'assets/images/products/trousers/black-tide-trousers-dark-ocean.jpg',
+    JSON_ARRAY(
+        'assets/images/products/trousers/black-tide-trousers-dark-ocean.jpg',
+        'assets/images/products/shirts/abyss-noir-shirt-dark-ocean.jpg',
+        'assets/images/products/jackets/phantom-edge-blazer-dark-ocean.jpg'
+    ),
+    4.60,
+    74,
+    'Stretch cotton twill',
+    'Machine wash cold',
+    'Tapered fit',
+    'Model is 6''0 and wears 32',
+    'DO-TRS-007',
+    JSON_ARRAY('Black', 'Slate'),
+    JSON_ARRAY('Cotton Twill'),
+    JSON_OBJECT('S', 10, 'M', 16, 'L', 12, 'XL', 9)
+),
+(
+    'Eclipse Formal Set',
+    'suit',
+    24000,
+    'Premium',
+    'The embodiment of Dark Ocean. Structured, commanding, untouchable.',
+    'assets/images/products/suits/eclipse-formal-set-dark-ocean.jpg',
+    JSON_ARRAY(
+        'assets/images/products/suits/eclipse-formal-set-dark-ocean.jpg',
+        'assets/images/products/suits/obsidian-crest-suit-dark-ocean.jpg',
+        'assets/images/products/coats/deep-current-overcoat-dark-ocean.jpg'
+    ),
+    4.90,
+    41,
+    'Luxury wool blend',
+    'Dry clean only',
+    'Signature fit',
+    'Model is 6''1 and wears L',
+    'DO-SUT-008',
+    JSON_ARRAY('Black'),
+    JSON_ARRAY('Wool Blend'),
+    JSON_OBJECT('S', 3, 'M', 7, 'L', 9, 'XL', 4)
+);
