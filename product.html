@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dark Ocean product details: premium menswear crafted with restrained silhouettes, deep tones, and refined tailoring.">
+    <meta property="og:title" content="Product | Dark Ocean">
+    <meta property="og:description" content="Explore product details, sizing, and styling notes from Dark Ocean.">
+    <meta property="og:type" content="product">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div id="navbar"></div>
+
+    <main id="content">
+    <section class="product-section fade-in">
+        <div class="product-gallery">
+            <div class="image-wrapper">
+                <img id="mainImage" class="main-image" alt="Dark Ocean product">
+            </div>
+
+            <div class="thumbnail-row" id="thumbnailRow"></div>
+        </div>
+
+        <div class="product-info">
+            <p class="eyebrow">Dark Ocean Signature Piece</p>
+            <h1 id="productName"></h1>
+            <div class="rating-row">
+                <span id="productRating">Rating 4.8</span>
+                <span id="productReviewsCount">(120 reviews)</span>
+            </div>
+            <p class="price" id="productPrice"></p>
+            <p class="description" id="productDescription"></p>
+            <p class="description"><strong>SKU:</strong> <span id="productSku">-</span></p>
+            <p class="description"><strong>Available Stock:</strong> <span id="productStock">-</span></p>
+            <p class="description"><strong>Colors:</strong> <span id="productColors">-</span></p>
+            <p class="description"><strong>Materials:</strong> <span id="productMaterials">-</span></p>
+
+            <div class="trust-strip">
+                <span>Free shipping over Rs. 7,000</span>
+                <span>7-day returns</span>
+                <span>Secure checkout</span>
+            </div>
+
+            <div class="sizes">
+                <span>Select Size</span>
+                <div class="size-row">
+                    <button class="size-btn" type="button">S</button>
+                    <button class="size-btn active" type="button">M</button>
+                    <button class="size-btn" type="button">L</button>
+                    <button class="size-btn" type="button">XL</button>
+                </div>
+            </div>
+
+            <div class="qty-picker" aria-label="Quantity selector">
+                <button type="button" id="decreaseQtyBtn" aria-label="Decrease quantity">-</button>
+                <span id="selectedQty" aria-live="polite">1</span>
+                <button type="button" id="increaseQtyBtn" aria-label="Increase quantity">+</button>
+            </div>
+
+            <div class="product-actions">
+                <button class="lux-btn add-cart" id="addToCartBtn" type="button">Add To Cart</button>
+                <button class="ghost-btn" id="wishlistBtn" type="button">Save to Wishlist</button>
+            </div>
+            <p class="inline-status" id="productStatus" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section class="details-grid fade-in">
+        <article class="detail-card">
+            <h3>Fabric</h3>
+            <p id="detailFabric"></p>
+        </article>
+        <article class="detail-card">
+            <h3>Fit</h3>
+            <p id="detailFit"></p>
+        </article>
+        <article class="detail-card">
+            <h3>Care</h3>
+            <p id="detailCare"></p>
+        </article>
+        <article class="detail-card">
+            <h3>Model Info</h3>
+            <p id="detailModel"></p>
+        </article>
+        <article class="detail-card">
+            <h3>Delivery</h3>
+            <p>Estimated dispatch in 1-2 days and delivery in 3-5 business days.</p>
+        </article>
+        <article class="detail-card">
+            <h3>Returns</h3>
+            <p>7-day return window for unworn items with original tags.</p>
+        </article>
+    </section>
+
+    <section class="reviews-section fade-in">
+        <div class="section-heading">
+            <p class="eyebrow">Verified Buyers</p>
+            <h2>What customers say about this piece.</h2>
+        </div>
+        <div id="reviewsGrid" class="reviews-grid"></div>
+    </section>
+
+    <section class="related-section fade-in" id="relatedSection">
+        <div class="section-heading">
+            <p class="eyebrow">Complete The Look</p>
+            <h2>Curated pairings from the collection.</h2>
+        </div>
+        <div class="product-grid" id="relatedGrid"></div>
+    </section>
+
+    <div class="sticky-buy" id="stickyBuyBar">
+        <div>
+            <strong id="stickyProductName">Product</strong>
+            <p id="stickyProductPrice">Rs. 0</p>
+        </div>
+        <button class="lux-btn" id="stickyAddBtn" type="button">Add to Cart</button>
+    </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

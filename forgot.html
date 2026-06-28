@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <div id="navbar"></div>
+
+    <section class="login-shell fade-in">
+        <div class="login-copy">
+            <p class="eyebrow">Password Recovery</p>
+            <h1>Reset your password.</h1>
+            <p>Request a secure reset token, then confirm your new password.</p>
+        </div>
+
+        <form class="login-card" id="forgotForm">
+            <h2>Recover account</h2>
+
+            <label for="recoverEmail">Registered Email</label>
+            <input id="recoverEmail" name="email" type="email" placeholder="you@example.com" required>
+
+            <label for="resetToken">Reset Token</label>
+            <input id="resetToken" name="token" type="text" placeholder="Paste your reset token" autocomplete="one-time-code">
+
+            <label for="newPassword">New Password</label>
+            <input id="newPassword" name="newPassword" type="password" placeholder="Min 8 characters" required>
+
+            <button class="lux-btn" type="submit">Continue</button>
+            <p class="login-status" id="forgotStatus" aria-live="polite"></p>
+            <div class="login-links">
+                <a href="login.html" class="text-link">Back to Login</a>
+            </div>
+        </form>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/forgot.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

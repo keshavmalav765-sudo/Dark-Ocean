@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your Dark Ocean cart. Adjust quantities, apply a coupon, and proceed to secure checkout.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div id="navbar"></div>
+
+    <main id="content">
+    <section class="cart-section fade-in">
+        <div class="section-heading">
+            <p class="eyebrow">Your Selection</p>
+            <h1>Review each piece before checkout.</h1>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+            <div class="total-copy">
+                <h2>Total: &#8377;<span id="totalPrice">0</span></h2>
+                <p id="cartMeta">0 items in your cart</p>
+                <div class="coupon-box">
+                    <label for="couponCode">Coupon</label>
+                    <div class="coupon-actions">
+                        <input id="couponCode" type="text" placeholder="Use OCEAN10, DARK500, SUIT15">
+                        <button class="ghost-btn" id="applyCouponBtn" type="button">Apply</button>
+                    </div>
+                    <p class="coupon-status" id="couponStatus" aria-live="polite"></p>
+                    <p class="discount-line" id="discountLine" hidden>Discount: <span id="discountValue">Rs. 0</span></p>
+                    <p class="final-total-line" id="finalTotalLine" hidden>Final Total: <span id="finalTotalValue">Rs. 0</span></p>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="ghost-btn" id="clearCartBtn" type="button">Clear Cart</button>
+                <a href="checkout.html" class="lux-btn checkout-btn" id="checkoutBtn">Proceed to Checkout</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

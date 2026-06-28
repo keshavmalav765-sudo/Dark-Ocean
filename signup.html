@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <div id="navbar"></div>
+
+    <section class="login-shell fade-in">
+        <div class="login-copy">
+            <p class="eyebrow">Create Account</p>
+            <h1>Join Dark Ocean.</h1>
+            <p>Save preferences, track orders, and enjoy a faster checkout experience.</p>
+        </div>
+
+        <form class="login-card" id="signupForm">
+            <h2>Create your profile</h2>
+
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Min 8 characters" required>
+
+            <button class="lux-btn" type="submit">Create Account</button>
+            <p class="login-status" id="signupStatus" aria-live="polite"></p>
+            <div class="login-links">
+                <a href="login.html" class="text-link">Back to Login</a>
+            </div>
+        </form>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/signup.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

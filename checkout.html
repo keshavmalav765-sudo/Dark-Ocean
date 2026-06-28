@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dark Ocean checkout. Confirm shipping details and place your order with secure payment and premium support.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div id="navbar"></div>
+
+    <main id="content">
+    <section class="checkout-section fade-in">
+        <form class="checkout-left" id="checkoutForm" novalidate>
+            <p class="eyebrow">Shipping Details</p>
+            <h2>Shipping address.</h2>
+            <ol class="checkout-steps" id="checkoutSteps" aria-label="Checkout progress">
+                <li id="stepAddress" class="active">Address</li>
+                <li id="stepPayment">Payment</li>
+                <li id="stepReview">Confirm</li>
+            </ol>
+
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Your full name" required>
+
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" required>
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="10-digit mobile number" required>
+
+            <label for="address">Address</label>
+            <input id="address" name="address" type="text" placeholder="House number and street" required>
+
+            <div class="checkout-row">
+                <div>
+                    <label for="city">City</label>
+                    <input id="city" name="city" type="text" placeholder="City" required>
+                </div>
+                <div>
+                    <label for="postalCode">Postal Code</label>
+                    <input id="postalCode" name="postalCode" type="text" placeholder="6-digit pin" required>
+                </div>
+            </div>
+
+            <button class="lux-btn form-submit" id="submitOrderBtn" type="submit">Continue to Payment</button>
+            <p class="form-status" id="checkoutStatus" aria-live="polite"></p>
+        </form>
+
+        <div class="checkout-right">
+            <p class="eyebrow">Order Summary</p>
+            <h2>Final review.</h2>
+            <div class="trust-cards">
+                <div class="trust-card">Encrypted payment flow</div>
+                <div class="trust-card">7-day return policy</div>
+                <div class="trust-card">Order updates by email</div>
+            </div>
+            <div id="checkoutItems"></div>
+            <h3>Total: <span id="checkoutTotal">Rs. 0</span></h3>
+            <p class="policy-note">By placing the order, you agree to our shipping and return policies.</p>
+        </div>
+    </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

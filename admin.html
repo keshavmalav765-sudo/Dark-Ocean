@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dark Ocean admin dashboard for managing products, users, and orders.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div id="navbar"></div>
+
+    <main id="content">
+    <section class="admin-hero fade-in">
+        <div>
+            <p class="eyebrow">Admin Dashboard</p>
+            <h1>Storefront overview and control center.</h1>
+            <p id="adminGreeting">Review your live storefront summary, watch cart demand, and inspect the latest local orders.</p>
+        </div>
+        <button class="lux-btn" id="logoutBtn" type="button">Log Out</button>
+    </section>
+
+    <section class="admin-stats fade-in" id="statsGrid">
+        <article class="admin-stat">
+            <span>Products</span>
+            <strong id="statProducts">0</strong>
+        </article>
+        <article class="admin-stat">
+            <span>Categories</span>
+            <strong id="statCategories">0</strong>
+        </article>
+        <article class="admin-stat">
+            <span>Cart Units</span>
+            <strong id="statCartItems">0</strong>
+        </article>
+        <article class="admin-stat">
+            <span>Cart Value</span>
+            <strong id="statCartValue">Rs. 0</strong>
+        </article>
+    </section>
+
+    <section class="admin-layout fade-in">
+        <div class="admin-panel">
+            <div class="panel-heading panel-actions">
+                <div>
+                    <p class="eyebrow">Catalog</p>
+                    <h2>Product inventory snapshot</h2>
+                </div>
+                <button class="lux-btn small-btn" id="addProductBtn" type="button">Add New Product</button>
+            </div>
+            <div class="table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productRows"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="admin-panel">
+            <div class="panel-heading">
+                <p class="eyebrow">Product Editor</p>
+                <h2 id="editorTitle">Create a new product</h2>
+            </div>
+            <form class="editor-form" id="productForm">
+                <input type="hidden" id="productId" name="productId">
+
+                <label for="productNameInput">Product Name</label>
+                <input id="productNameInput" name="productName" type="text" required>
+
+                <label for="productCategoryInput">Category</label>
+                <select id="productCategoryInput" name="productCategory" required>
+                    <option value="jacket">Jacket</option>
+                    <option value="shirt">Shirt</option>
+                    <option value="suit">Suit</option>
+                    <option value="coat">Coat</option>
+                    <option value="knitwear">Knitwear</option>
+                    <option value="trousers">Trousers</option>
+                </select>
+
+                <label for="productPriceInput">Price</label>
+                <input id="productPriceInput" name="productPrice" type="number" min="0" required>
+
+                <label for="productImageInput">Primary Image Path</label>
+                <input id="productImageInput" name="productImage" type="text" required>
+
+                <label for="productGalleryInput">Gallery Image Paths</label>
+                <textarea id="productGalleryInput" name="productGallery" rows="4" placeholder="One image path per line"></textarea>
+
+                <label for="productDescriptionInput">Description</label>
+                <textarea id="productDescriptionInput" name="productDescription" rows="5" required></textarea>
+
+                <div class="editor-actions">
+                    <button class="lux-btn small-btn" type="submit">Save Product</button>
+                    <button class="ghost-btn" id="resetFormBtn" type="button">Reset</button>
+                </div>
+                <p class="login-status" id="productFormStatus" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <section class="admin-layout fade-in">
+        <div class="admin-panel">
+            <div class="panel-heading">
+                <p class="eyebrow">Recent Cart</p>
+                <h2>Customer basket activity</h2>
+            </div>
+            <div id="cartSummary" class="admin-list"></div>
+        </div>
+
+        <div class="admin-panel">
+            <div class="panel-heading">
+                <p class="eyebrow">Orders</p>
+                <h2>Order queue</h2>
+            </div>
+            <div id="ordersList" class="admin-list"></div>
+        </div>
+    </section>
+
+    <section class="admin-layout fade-in">
+        <div class="admin-panel">
+            <div class="panel-heading panel-actions">
+                <div>
+                    <p class="eyebrow">Users</p>
+                    <h2>Customer accounts</h2>
+                </div>
+                <button class="lux-btn small-btn" id="addUserBtn" type="button">Add User</button>
+            </div>
+            <div class="table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Created</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userRows"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="admin-panel">
+            <div class="panel-heading">
+                <p class="eyebrow">User Editor</p>
+                <h2 id="userEditorTitle">Create a user</h2>
+            </div>
+            <form class="editor-form" id="userForm">
+                <input type="hidden" id="userId" name="userId">
+
+                <label for="userNameInput">Name</label>
+                <input id="userNameInput" name="userName" type="text" required>
+
+                <label for="userEmailInput">Email</label>
+                <input id="userEmailInput" name="userEmail" type="email" required>
+
+                <label for="userRoleInput">Role</label>
+                <select id="userRoleInput" name="userRole" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+
+                <label for="userActiveInput">Active</label>
+                <select id="userActiveInput" name="userActive" required>
+                    <option value="1">Active</option>
+                    <option value="0">Inactive</option>
+                </select>
+
+                <label for="userPasswordInput">Password</label>
+                <input id="userPasswordInput" name="userPassword" type="password" placeholder="Leave blank to keep unchanged">
+
+                <div class="editor-actions">
+                    <button class="lux-btn small-btn" type="submit">Save User</button>
+                    <button class="ghost-btn" id="resetUserBtn" type="button">Reset</button>
+                </div>
+                <p class="login-status" id="userFormStatus" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

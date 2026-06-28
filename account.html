@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/account.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <div id="navbar"></div>
+
+    <section class="account-hero fade-in">
+        <p class="eyebrow">Account</p>
+        <h1 id="accountTitle">Your Dark Ocean profile.</h1>
+        <p id="accountSubtitle">Track orders, saved pieces, and checkout details.</p>
+    </section>
+
+    <section class="account-layout fade-in">
+        <article class="account-card">
+            <h2>Profile</h2>
+            <p><strong>Status:</strong> <span id="profileStatus">Guest</span></p>
+            <p><strong>Name:</strong> <span id="profileName">-</span></p>
+            <p><strong>Email:</strong> <span id="profileEmail">-</span></p>
+            <div class="account-actions">
+                <a class="lux-btn" id="loginActionBtn" href="login.html">Sign In</a>
+                <button class="ghost-btn" id="accountLogoutBtn" type="button" hidden>Logout</button>
+            </div>
+        </article>
+
+        <article class="account-card">
+            <h2>Saved Addresses</h2>
+            <div id="addressList" class="stack-list"></div>
+        </article>
+    </section>
+
+    <section class="account-orders fade-in">
+        <div class="section-heading">
+            <p class="eyebrow">My Orders</p>
+            <h2>Latest order history on this device.</h2>
+        </div>
+        <div id="ordersContainer" class="orders-list"></div>
+    </section>
+
+    <section class="account-layout fade-in">
+        <article class="account-card">
+            <h2>Notifications</h2>
+            <div id="notificationsList" class="stack-list"></div>
+        </article>
+        <article class="account-card">
+            <h2>Conversion Snapshot</h2>
+            <div id="funnelStats" class="stack-list"></div>
+        </article>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/info-pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <div id="navbar"></div>
+
+    <section class="info-hero fade-in">
+        <p class="eyebrow">Contact</p>
+        <h1>Reach the studio for styling, orders, or product questions.</h1>
+        <p>We keep communication direct, clear, and responsive.</p>
+    </section>
+
+    <section class="contact-layout fade-in">
+        <div class="info-card">
+            <h2>Studio</h2>
+            <p>Dark Ocean House</p>
+            <p>Colaba, Mumbai</p>
+            <p>India</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Contact Details</h2>
+            <p><a href="mailto:concierge@darkocean.in">concierge@darkocean.in</a></p>
+            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+            <p>Mon to Sat, 10 AM to 7 PM</p>
+        </div>
+
+        <form class="info-card contact-form" id="contactForm" novalidate>
+            <h2>Send A Message</h2>
+            <input type="text" id="contactName" name="name" placeholder="Your Name" required>
+            <input type="email" id="contactEmail" name="email" placeholder="Your Email" required>
+            <textarea rows="5" id="contactMessage" name="message" placeholder="Tell us what you need" required></textarea>
+            <button class="lux-btn" type="submit">Send Inquiry</button>
+            <p class="login-status" id="contactStatus" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

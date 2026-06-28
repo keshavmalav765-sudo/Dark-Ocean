@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmed | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order confirmation for Dark Ocean. Review your order ID and payment status.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/success.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div id="navbar"></div>
+
+    <main id="content">
+    <section class="success-section fade-in">
+        <p class="eyebrow">Order Confirmed</p>
+        <h1>Your presence has been registered.</h1>
+        <p>Thank you for choosing Dark Ocean. Your order has been placed successfully.</p>
+
+        <div class="success-card" id="successCard">
+            <p><strong>Order ID:</strong> <span id="orderId">-</span></p>
+            <p><strong>Total:</strong> <span id="orderTotal">Rs. 0</span></p>
+            <p><strong>Delivery City:</strong> <span id="orderCity">-</span></p>
+            <p><strong>Payment:</strong> <span id="orderPayment">-</span></p>
+            <p><strong>Payment Status:</strong> <span id="orderPaymentStatus">-</span></p>
+            <p><strong>Transaction Ref:</strong> <span id="orderTxnRef">-</span></p>
+        </div>
+
+        <div class="success-actions">
+            <a href="shop.html" class="lux-btn">Continue Shopping</a>
+            <a href="account.html" class="ghost-btn">View My Orders</a>
+        </div>
+    </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/success.js"></script>
+</body>
+</html>

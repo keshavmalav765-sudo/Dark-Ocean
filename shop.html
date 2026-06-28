@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop Dark Ocean luxury menswear. Explore tailored jackets, shirts, suits, coats, knitwear, and trousers in a cinematic black-and-gold aesthetic.">
+    <meta property="og:title" content="Shop | Dark Ocean">
+    <meta property="og:description" content="Explore Dark Ocean's signature menswear collection built for quiet authority.">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div id="navbar"></div>
+
+    <main id="content">
+    <section class="shop-hero fade-in">
+        <p class="eyebrow">The Collection</p>
+        <h1>Tailored essentials for evenings, ceremonies, and daily authority.</h1>
+    </section>
+
+    <section class="shop-container">
+        <aside class="filters fade-in">
+            <div class="filter-heading">
+                <h2>Refine</h2>
+                <p>Filter by category or price, then sort the collection.</p>
+            </div>
+
+            <div class="filter-group">
+                <h4>Category</h4>
+                <label><input type="checkbox" name="category" value="jacket"> Jackets</label>
+                <label><input type="checkbox" name="category" value="shirt"> Shirts</label>
+                <label><input type="checkbox" name="category" value="suit"> Suits</label>
+                <label><input type="checkbox" name="category" value="coat"> Coats</label>
+                <label><input type="checkbox" name="category" value="knitwear"> Knitwear</label>
+                <label><input type="checkbox" name="category" value="trousers"> Trousers</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price</h4>
+                <label><input type="radio" name="price" value="all" checked> All prices</label>
+                <label><input type="radio" name="price" value="low"> Under &#8377;5,000</label>
+                <label><input type="radio" name="price" value="mid"> &#8377;5,000 to &#8377;15,000</label>
+                <label><input type="radio" name="price" value="high"> Above &#8377;15,000</label>
+            </div>
+
+            <button class="ghost-btn filter-reset" id="clearFiltersBtn" type="button">Reset Filters</button>
+        </aside>
+
+        <div class="shop-content">
+            <div class="shop-top fade-in">
+                <div class="shop-controls">
+                    <p id="resultMeta">Eight signature pieces. Build the wardrobe with intention.</p>
+                    <div class="search-wrap">
+                        <label class="sr-only" for="searchInput">Search products</label>
+                        <input id="searchInput" type="search" placeholder="Search by name, category, fabric, or use words like blazer/sherwani/trouser" autocomplete="off" list="searchSuggestions">
+                        <datalist id="searchSuggestions"></datalist>
+                    </div>
+                </div>
+
+                <label class="sort-label" for="sort">
+                    Sort by
+                    <select id="sort">
+                        <option value="featured">Featured</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                        <option value="name">Name</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="activeFilterChips" class="active-filter-chips"></div>
+            <div class="product-grid fade-in" id="productGrid"></div>
+            <section class="recommend-strip fade-in" id="recommendStrip">
+                <div class="section-heading">
+                    <p class="eyebrow">Recommended</p>
+                    <h2>Smart picks based on your activity.</h2>
+                </div>
+                <div class="product-grid" id="recommendGrid"></div>
+            </section>
+        </div>
+    </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

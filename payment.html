@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment | Dark Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="lux-loader">
+        <div class="loader-content">
+            <h1>DARK OCEAN</h1>
+        </div>
+    </div>
+
+    <div id="navbar"></div>
+
+    <section class="checkout-section fade-in">
+        <form class="checkout-left" id="paymentForm" novalidate>
+            <p class="eyebrow">Payment Details</p>
+            <h2>Choose payment method.</h2>
+            <ol class="checkout-steps" aria-label="Checkout progress">
+                <li class="completed">Address</li>
+                <li class="active">Payment</li>
+                <li>Confirm</li>
+            </ol>
+
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="">Choose a payment method</option>
+                <option value="upi">UPI</option>
+                <option value="card">Card</option>
+                <option value="cod">Cash on Delivery</option>
+            </select>
+            <p class="field-error" id="paymentMethodError" aria-live="polite"></p>
+
+            <div class="payment-fields" id="upiFields" hidden>
+                <label for="upiId">UPI ID</label>
+                <input id="upiId" name="upiId" type="text" placeholder="name@bank">
+                <p class="field-error" id="upiIdError" aria-live="polite"></p>
+            </div>
+
+            <div class="payment-fields" id="cardFields" hidden>
+                <label for="cardName">Cardholder Name</label>
+                <input id="cardName" name="cardName" type="text" placeholder="Name on card">
+                <p class="field-error" id="cardNameError" aria-live="polite"></p>
+
+                <label for="cardNumber">Card Number</label>
+                <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" placeholder="1234 5678 9012 3456" maxlength="19">
+                <p class="field-error" id="cardNumberError" aria-live="polite"></p>
+
+                <div class="checkout-row">
+                    <div>
+                        <label for="cardExpiry">Expiry</label>
+                        <input id="cardExpiry" name="cardExpiry" type="text" placeholder="MM/YY" maxlength="5">
+                        <p class="field-error" id="cardExpiryError" aria-live="polite"></p>
+                    </div>
+                    <div>
+                        <label for="cardCvv">CVV</label>
+                        <input id="cardCvv" name="cardCvv" type="password" inputmode="numeric" placeholder="123" maxlength="4">
+                        <p class="field-error" id="cardCvvError" aria-live="polite"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-fields" id="codFields" hidden>
+                <p class="cod-note">COD is available for select PIN codes only.</p>
+            </div>
+
+            <label class="terms-check">
+                <input id="terms" name="terms" type="checkbox" required>
+                I confirm shipping details are correct.
+            </label>
+
+            <div class="checkout-row">
+                <a class="ghost-btn" href="checkout.html">Back</a>
+                <button class="lux-btn form-submit" id="submitOrderBtn" type="submit">Complete Purchase</button>
+            </div>
+            <p class="form-status" id="paymentStatus" aria-live="polite"></p>
+            <button class="ghost-btn" id="retryPaymentBtn" type="button" hidden>Retry Payment</button>
+        </form>
+
+        <div class="checkout-right">
+            <p class="eyebrow">Order Summary</p>
+            <h2>Final review.</h2>
+            <div class="shipping-preview" id="shippingPreview">
+                <div class="shipping-preview-head">
+                    <h3>Shipping Address</h3>
+                    <a class="text-link" href="checkout.html">Edit Address</a>
+                </div>
+                <p><strong id="shipName">-</strong></p>
+                <p id="shipEmail">-</p>
+                <p id="shipPhone">-</p>
+                <p id="shipAddress">-</p>
+                <p><strong>Estimated Delivery:</strong> <span id="shipEta">-</span></p>
+            </div>
+            <div class="trust-cards">
+                <div class="trust-card">Encrypted payment flow</div>
+                <div class="trust-card">7-day return policy</div>
+                <div class="trust-card">Order updates by email</div>
+            </div>
+            <div id="paymentItems"></div>
+            <h3>Total: <span id="paymentTotal">Rs. 0</span></h3>
+            <p class="policy-note">By placing the order, you agree to our shipping and return policies.</p>
+        </div>
+    </section>
+
+    <div class="payment-modal" id="paymentModal" hidden>
+        <div class="payment-modal-card">
+            <h3 id="paymentModalTitle">Processing Payment</h3>
+            <p id="paymentModalText">Please wait while we process your payment.</p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/payment.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
